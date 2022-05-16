@@ -89,20 +89,29 @@ function PostSection() {
           />
         </div>
 
-        <button className="btn btn-sm btn-primary" onClick={postData}>
+        <button
+          className="btn btn-sm btn-primary"
+          onClick={postData}>
           Post Data
         </button>
 
         <button
+          // data-testid="delete"
           className="btn btn-sm btn-warning ml-2"
           onClick={clearPostOutput}
         >
           Clear
         </button>
 
+        <button
+          data-testid="delete"
+          onClick={() => setTitle('')}
+          className="btn btn-sm btn-danger ml-2"
+        >delete</button>
+
         <div className="alert alert-primary mt-2" role="alert">
 
-          <span>{`Title: ${title}`}</span>
+          <span data-testid="text-output">{`Title: ${title}`}</span>
           <br />
 
           <span>{`Description: ${description}`}</span>
