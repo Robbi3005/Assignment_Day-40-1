@@ -25,3 +25,6 @@ npm test
 # check coverage
 npm test -- --coverage
 ```
+# cek update'
+npx npm-check-updates -u
+lalu npm install

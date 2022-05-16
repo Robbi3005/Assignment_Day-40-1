@@ -6,7 +6,7 @@ import PostSection from './view';
 
 // belum sukses
 
-test.skip('renders input', async () => {
+test('renders input', async () => {
 
   const testText = "hai";
 
@@ -15,7 +15,7 @@ test.skip('renders input', async () => {
   const input = screen.getByTestId("input");
   userEvent.type(input, testText)
 
-  const textElement = await screen.findByDisplayValue(testText);
-  expect(textElement).toBeInTheDocument;
+  const textElement = await screen.findByText(`Title: ${testText}`);
+  expect(textElement);
 
 });
