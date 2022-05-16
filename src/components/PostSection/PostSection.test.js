@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import PostSection from './view';
 import { waitFor } from "@testing-library/dom";
+import '@testing-library/jest-dom';
 
 //---------------------------------------------------------------------------------------------------------------------
 
@@ -17,7 +18,7 @@ test('renders input', async () => {
   userEvent.type(input, testText)
 
   const textElement = await screen.findByText(`Title: ${testText}`);
-  expect(textElement);
+  expect(textElement).toBeInTheDocument();
 
 });
 
